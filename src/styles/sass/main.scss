@@ -1,0 +1,42 @@
+$bgColor: #0b152c;
+$color: #d7cccc;
+$pBgColor: #e4c4c4;
+$pColor: #151111;
+$primaryBg: #232327;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $primaryBg;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: $pBgColor;
+  color: $pColor;
+  padding: 0 20px;
+  a {
+    margin: 5px;
+    color: $pColor;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover {
+    color: $pColor;
+  }
+  .menu {
+    .bars {
+        background-color: $pColor;
+        cursor: pointer;
+        height: 3px;
+        width: 20px;
+        margin: 3px;
+        transition: color 0.3s ease;
+    }
+  }
+}
+

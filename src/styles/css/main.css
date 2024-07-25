@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #060633;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #e4c4c4;
+  color: #151111;
+  padding: 0 20px;
+}
+.navbar a {
+  margin: 5px;
+  color: #151111;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #151111;
+}
+.navbar .menu .bars {
+  background-color: #151111;
+  cursor: pointer;
+  height: 3px;
+  width: 20px;
+  margin: 3px;
+  transition: color 0.3s ease;
+}
+
+/*# sourceMappingURL=main.css.map */

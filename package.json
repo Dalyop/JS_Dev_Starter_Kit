@@ -1,0 +1,25 @@
+{
+  "name": "js_dev_environment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "gulp"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "del": "^7.1.0",
+    "gulp-nodemon": "^2.5.0",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "gulp": "^5.0.0"
+  }
+}

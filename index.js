@@ -4,10 +4,10 @@ const express = require('express');
 const path = require('path');
 // Create an Express Application
 const app = express();
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 5001;
 
 // Set the distribution and views folder
-app.set('view', path.join(__dirname, '/dist/views'));
+app.set('views', path.join(__dirname, '/dist/views'));
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/dist/public'));
 

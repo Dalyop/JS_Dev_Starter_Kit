@@ -10,8 +10,12 @@ var paths = {
 		dist: 'dist/views'
 	},
 	styles: {
-		src: 'src/styles/**/*.css',
+		src: 'src/styles/**/*.scss',
 		dist: 'dist/public/styles'
+	},
+	scripts: {
+		src: 'src/js/**/*.js',
+		dist: 'dist/scripts'
 	}
 };
 

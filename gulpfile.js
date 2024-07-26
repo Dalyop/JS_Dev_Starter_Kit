@@ -1,8 +1,13 @@
+const browserSync = require('browser-sync');
+
 var
     gulp = require('gulp'),
     config = require('./config/gulp'),
-    //del = require('del'),
+    del = require('del'),
     nodemon = require('gulp-nodemon'),
+    sass = require('gulp-sass')(require('sass'));
+    // cleanCSS = require('gulp-clean-css');
+    // sourcemaps = require('gulp-sourcemaps');
     browserSync = require('browser-sync').create(),
     reload = browserSync.reload
     ;
@@ -11,6 +16,27 @@ var
 // gulp.task('clean', function () {
 //     return del(config.paths.dist_dir);
 // });
+
+// Clean the dist folder
+function clean() {
+    return del(['dist']);
+}
+
+// Compiling SASS to CSS
+function styles() {
+    return gulp.src(paths.styles.src)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dist(paths.styles.dist))
+    .pipe(browserSync.stream());
+}
+
+// Watch files
+function watchFiles() {
+    gulp.watch(paths.styles.src, styles);
+    gulp.watch('dist/views/**/*.ejs').on('change', browserSync.reload);
+    gulp.watch(paths.scripts.src).on('change', browserSync.reload);
+}
+
 // gulp task to define our VIEWS
 gulp.task('dev:views', function() {
     return gulp
